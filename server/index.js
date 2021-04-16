@@ -33,6 +33,10 @@ app.use(function(req, res, next) {
 //     app.get('port'))
 //   });
 
+app.get('/', (req,res)=>{
+  res.send("Hello we are in heroku")
+})
+
 app.use('/posts', PostMethod);
 const port = process.env.PORT || 5000;
 

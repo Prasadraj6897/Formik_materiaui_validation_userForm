@@ -5,7 +5,9 @@ const UPDATEPOSTS = "UPDATEPOSTS";
 const DELETEPOSTS = "DELETEPOSTS";
 const LIKEPOSTS = "LIKEPOSTS";
 
-const url = "http://localhost:5000/posts"
+///changed https://localhost:5000/posts to  https://project1-memories.herokuapp.com/posts for online deployment
+
+const url = "https://project1-memories.herokuapp.com/posts"
 
 // const fetchposts = () =>axios.get(url)
 
@@ -29,7 +31,7 @@ let put_Posts_ACTION = (newposts) => {
         
         try{
             // console.log("url", url)
-            let response = await axios.post("http://localhost:5000/posts", newposts);
+            let response = await axios.post("https://project1-memories.herokuapp.com/posts", newposts);
             let payload = response.data
             
             dispatch({type : PUTPOSTS, payload:payload})
@@ -45,7 +47,7 @@ let update_Posts_ACTION = (id, updateposts) => {
         
         try{
             // console.log("url", url)
-            let response = await axios.patch("http://localhost:5000/posts"+ '/' + id, updateposts);
+            let response = await axios.patch("https://project1-memories.herokuapp.com/posts"+ '/' + id, updateposts);
             let payload = response.data
             
             dispatch({type : UPDATEPOSTS, payload:payload})
@@ -61,7 +63,7 @@ let Delete_Posts_ACTION = (id) => {
         
         try{
             
-             await axios.delete("http://localhost:5000/posts"+ '/' + id);
+             await axios.delete("https://project1-memories.herokuapp.com/posts"+ '/' + id);
              
             
             dispatch({type : DELETEPOSTS, payload:id})
@@ -77,7 +79,7 @@ let Like_Posts_ACTION = (id) => {
         
         try{
             
-             const {data} = await axios.patch("http://localhost:5000/posts"+ '/' + id + '/' + 'likepost');
+             const {data} = await axios.patch("https://project1-memories.herokuapp.com/posts"+ '/' + id + '/' + 'likepost');
            
             //  console.log("url", "http://localhost:5000/posts"+ '/' + id + '/' + 'likepost')
             dispatch({type : LIKEPOSTS, payload:data})

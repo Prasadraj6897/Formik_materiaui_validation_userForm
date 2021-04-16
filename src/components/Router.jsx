@@ -9,6 +9,9 @@ import NavBar from "./NavBar"
 import Footer from "./Footer"
 import ContactPage from "./contactus"
 import RegisterPage from "./RegisterPage"
+import Registration_Form from "./Example/RegistrationForm_validation"
+import Account from "./Example/Account"
+import Profile from "./Example/Profile"
 
 let Routes = () =>{
 
@@ -20,16 +23,21 @@ let Routes = () =>{
         <React.Fragment>
             
             <Router>
-            <NavBar />
+            {/* <NavBar /> */}
+            < Registration_Form />
                     <Switch>
-                        <Route exact path = "/"  component = {HomePage} />
+                        {/* <Route exact path = "/"  component = {HomePage} />
                         <Route  path = "/features"  component = {Feautures} />
                         <Route  path = "/aboutus"  component = {AboutUs} />
                         <Route  path = "/pricing"  component = {Pricing} />
                         <Route  path = "/contactus"  component = {ContactPage} />
-                        <Route  path = "/signup"  component = {RegisterPage} />
+                        <Route  path = "/signup"  component = {RegisterPage} /> */}
+                        {/* <Route exact path = "/"  component = {Registration_Form} /> */}
+                        <Route exact path = "/profile"  component = {Profile} />
+                        <Route exact path = "/account"  component = {Account} />
+                        
                     </Switch>
-                    <Footer />
+                    {/* <Footer /> */}
                 </Router>
                
         </React.Fragment>

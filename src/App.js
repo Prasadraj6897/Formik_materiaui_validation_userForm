@@ -7,16 +7,20 @@ import Routes from "./components/Router"
 import {Provider} from "react-redux"
 import {store} from "./redux/store"
 import Message from "./components/Message"
+import Registration_Form from "./components/Example/RegistrationForm_validation"
 function App() {
   return (
       
-    <Provider store = {store}>
-         <Message />
+    // <Provider store = {store}>
+    //      <Message />
           
-    </Provider>
+    // </Provider>
    // 
           //     <Routes />
           // 
+          <React.Fragment>
+            <Routes />
+          </React.Fragment>
   );
 }
 
